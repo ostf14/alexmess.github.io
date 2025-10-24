@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alex Mess - Indie Game Developer, UX/UI & Graphic Designer from Kraków, Poland. Building atmospheric pixel-art worlds in Unreal Engine 5.">
-    <meta name="keywords" content="Alex Mess, game developer, indie games, UX designer, UI designer, graphic designer, pixel art, Unreal Engine, Kraków, Poland, Mess Culture Games">
-    <title>Alex Mess - Game Developer & Designer</title>
+    <title>My Sleeping Gypsy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,167 +15,484 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: 'Crimson Text', serif;
+            color: #8B7355;
+            background-color: #FAF7F2;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 60px;
+            background-color: #FAF7F2;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #8B7355;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+        }
+
+        nav a {
+            color: #8B7355;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .icon-btn:hover {
+            opacity: 1;
+        }
+
+        .icon-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: #8B7355;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            padding-left: 60px;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 58%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1400&q=80') center/cover;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 90px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 0.95;
+            letter-spacing: -1px;
+            color: #B89968;
+            margin-bottom: 50px;
+        }
+
+        .circle-cta {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 1px solid #8B7355;
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8B7355;
+            font-weight: 400;
         }
 
-        .container {
-            max-width: 700px;
+        .circle-cta:hover {
+            background: #8B7355;
+            color: #FAF7F2;
+        }
+
+        .hero-tagline {
+            position: absolute;
+            top: 35%;
+            right: 100px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #8B7355;
+            z-index: 3;
+            max-width: 200px;
+        }
+
+        /* New Collection */
+        .new-collection {
+            padding: 120px 60px 100px;
+        }
+
+        .section-title {
+            font-size: 75px;
+            font-weight: 400;
+            font-style: italic;
+            color: #B89968;
+            margin-bottom: 70px;
+            letter-spacing: -1px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
             background: white;
-            padding: 60px 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .product-card:hover {
+            transform: translateY(-8px);
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 30px;
+        .product-card:nth-child(2) {
+            grid-column: span 2;
+            grid-row: span 2;
         }
 
-        .bio {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 40px;
-            line-height: 1.8;
+        .product-image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 140%;
+            overflow: hidden;
         }
 
-        .links {
+        .product-card:nth-child(2) .product-image-wrapper {
+            padding-bottom: 140%;
+        }
+
+        .product-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px 15px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-bottom: 30px;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .link {
-            display: inline-block;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .product-name {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8B7355;
+            font-weight: 400;
         }
 
-        .link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        .product-price {
+            font-size: 15px;
+            color: #8B7355;
         }
 
-        .projects {
-            margin-top: 40px;
-            text-align: left;
+        .color-swatches {
+            display: flex;
+            gap: 8px;
+            padding: 0 15px 20px;
         }
 
-        .projects h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #333;
+        .color-swatch {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 0.5px solid rgba(139, 115, 85, 0.2);
+            cursor: pointer;
         }
 
-        .project {
-            margin-bottom: 15px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
+        .shop-all-btn {
+            display: block;
+            margin: 60px auto 0;
+            padding: 18px 50px;
+            border: 1px solid #8B7355;
+            background: transparent;
+            color: #8B7355;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Crimson Text', serif;
         }
 
-        .project h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: #667eea;
+        .shop-all-btn:hover {
+            background: #8B7355;
+            color: #FAF7F2;
         }
 
-        .project p {
-            font-size: 0.95rem;
-            color: #666;
+        /* Old Collections */
+        .old-collections {
+            padding: 120px 60px;
+            display: grid;
+            grid-template-columns: 45% 55%;
+            gap: 80px;
+            align-items: center;
         }
 
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #999;
-            font-size: 0.9rem;
+        .old-collections h2 {
+            font-size: 75px;
+            font-weight: 400;
+            font-style: italic;
+            color: #B89968;
+            line-height: 1;
+            margin-bottom: 80px;
+            letter-spacing: -1px;
         }
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
+        .collections-list {
+            list-style: none;
+            border-top: 1px solid rgba(139, 115, 85, 0.15);
+        }
+
+        .collections-list li {
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(139, 115, 85, 0.15);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 23px;
+            font-style: italic;
+            color: #8B7355;
+            position: relative;
+        }
+
+        .collections-list li:hover {
+            padding-left: 25px;
+            color: #B89968;
+        }
+
+        .collections-list li:nth-child(2)::before {
+            content: '—';
+            position: absolute;
+            left: -30px;
+            color: #B89968;
+        }
+
+        .collections-description {
+            margin-top: 50px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #8B7355;
+            max-width: 420px;
+        }
+
+        .old-collections-image {
+            width: 100%;
+            height: 750px;
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            .container {
-                padding: 40px 20px;
+            
+            .product-card:nth-child(2) {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 30px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 0 30px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero-background {
+                width: 100%;
+                opacity: 0.3;
+            }
+
+            .section-title {
+                font-size: 45px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .old-collections {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .old-collections h2 {
+                font-size: 45px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Alex Mess</h1>
-        <p class="subtitle">🎮 Indie Game Developer | 🛠️ UX/UI & Graphic Designer</p>
-        
-        <p class="bio">
-            Building atmospheric pixel-art worlds in <strong>Unreal Engine 5</strong>.<br>
-            Founder of <strong>Mess Culture Games</strong>, based in Kraków, Poland.<br>
-            Passionate about game design, user experience, and visual storytelling.
-        </p>
-
-        <div class="links">
-            <a href="https://linkedin.com/in/alex-mess" class="link" target="_blank">LinkedIn</a>
-            <a href="https://instagram.com/l_mess_l" class="link" target="_blank">Instagram</a>
-            <a href="https://t.me/ehhlwmidb" class="link" target="_blank">Telegram</a>
-            <a href="YOUR_NOTION_CV_LINK" class="link" target="_blank">CV</a>
+    <!-- Header -->
+    <header>
+        <div class="logo">My Sleeping Gypsy</div>
+        <nav>
+            <a href="#shop">Shop</a>
+            <a href="#manifesto">Manifesto</a>
+            <a href="#delivery">Delivery</a>
+            <a href="#stockists">Stockists</a>
+            <a href="#contacts">Contacts</a>
+        </nav>
+        <div class="header-icons">
+            <button class="icon-btn">
+                <svg viewBox="0 0 24 24" fill="none">ircle cx="11" cy="11" r="8"8"/><path d="m21 21-4.35-4.35"/></svg>
+            </button>
+            <button class="icon-btn">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>ircle cx="12" cy="7"7" r="4"/></svg>
+            </button>
+            <button class="icon-btn">
+                <svg viewBox="0 0 24 24" fill="none">ircle cx="9" cy="21" r="1"1"/>ircle cx="20" cycy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </button>
         </div>
+    </header>
 
-        <div class="projects">
-            <h2>Projects</h2>
-            
-            <div class="project">
-                <h3>🎮 Mess Culture Games</h3>
-                <p>Indie game studio creating atmospheric narrative experiences with pixel-art aesthetics.</p>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1>Sustainability<br>Heritage<br>Culture</h1>
+            <button class="circle-cta">About our values</button>
+        </div>
+        <div class="hero-tagline">
+            Save as long as possible.<br>
+            Change when you need it.
+        </div>
+    </section>
+
+    <!-- New Collection -->
+    <section class="new-collection">
+        <h2 class="section-title">New collection</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&q=80" alt="Peony" class="product-image">
+                </div>
+                <div class="product-info">
+                    <span class="product-name">Peony</span>
+                    <span class="product-price">$850</span>
+                </div>
+                <div class="color-swatches">
+                    <span class="color-swatch" style="background: #E8DCC8"></span>
+                    <span class="color-swatch" style="background: #D4A373"></span>
+                </div>
             </div>
 
-            <div class="project">
-                <h3>🎨 Mess Culture Design</h3>
-                <p>UX/UI design and visual identity projects for games and digital products.</p>
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1200&q=80" alt="Magnolia" class="product-image">
+                </div>
+                <div class="product-info">
+                    <span class="product-name">Magnolia</span>
+                    <span class="product-price">$950</span>
+                </div>
+                <div class="color-swatches">
+                    <span class="color-swatch" style="background: #A8C5DC"></span>
+                </div>
             </div>
 
-            <div class="project">
-                <h3>🖼️ Mess Culture Art</h3>
-                <p>Portfolio of pixel art, concept art, and game assets.</p>
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&q=80" alt="Orchid" class="product-image">
+                </div>
+                <div class="product-info">
+                    <span class="product-name">Orchid</span>
+                    <span class="product-price">$950</span>
+                </div>
+                <div class="color-swatches">
+                    <span class="color-swatch" style="background: #3D5A80"></span>
+                    <span class="color-swatch" style="background: #98B4D4"></span>
+                </div>
             </div>
 
-            <div class="project">
-                <h3>💀 Alonestanding</h3>
-                <p>Philosophical Telegram channel exploring existentialism, technology, and digital culture.</p>
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Peony" class="product-image">
+                </div>
+                <div class="product-info">
+                    <span class="product-name">Peony</span>
+                    <span class="product-price">$850</span>
+                </div>
+                <div class="color-swatches">
+                    <span class="color-swatch" style="background: #2C2C2C"></span>
+                    <span class="color-swatch" style="background: #C4281C"></span>
+                </div>
             </div>
         </div>
+        <button class="shop-all-btn">Shop</button>
+    </section>
 
-        <div class="footer">
-            <p>© 2025 Alex Mess. All rights reserved.</p>
-            <p>Kraków, Poland 🇵🇱</p>
+    <!-- Old Collections -->
+    <section class="old-collections">
+        <div>
+            <h2>Old<br>collections</h2>
+            <ul class="collections-list">
+                <li>La Fleur D'Oranger</li>
+                <li>The Forest Song</li>
+                <li>A Capella & Classics</li>
+                <li>The Secret Gardens</li>
+            </ul>
+            <p class="collections-description">
+                Our collections of past years are still available for purchase and in demand.
+            </p>
         </div>
-    </div>
+        <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=1000&q=80" alt="Old Collection" class="old-collections-image">
+    </section>
+
 </body>
 </html>
 
