@@ -6,7 +6,7 @@
     <title>My Sleeping Gypsy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Suisse+Intl&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,9 +15,9 @@
         }
 
         body {
-            font-family: 'Crimson Text', serif;
-            color: #8B7355;
-            background-color: #FAF7F2;
+            font-family: 'Suisse Intl', sans-serif;
+            color: rgb(124, 116, 106);
+            background-color: rgb(255, 251, 247);
             overflow-x: hidden;
         }
 
@@ -26,147 +26,136 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 60px;
-            background-color: #FAF7F2;
+            padding: 29px 551px 29px 200px;
+            background-color: rgb(255, 251, 247);
+            border-bottom: 1px solid rgb(214, 200, 182);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         .logo {
-            font-size: 11px;
-            letter-spacing: 3px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            letter-spacing: 0px;
             text-transform: uppercase;
-            font-weight: 400;
-            color: #8B7355;
+            color: rgb(165, 129, 85);
         }
 
         nav {
             display: flex;
-            gap: 50px;
+            gap: 80px;
         }
 
         nav a {
-            color: #8B7355;
+            color: rgb(165, 129, 85);
             text-decoration: none;
-            font-size: 13px;
+            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 0px;
             font-weight: 400;
             transition: opacity 0.2s;
         }
 
         nav a:hover {
-            opacity: 0.6;
+            opacity: 0.7;
         }
 
         .header-icons {
             display: flex;
-            gap: 25px;
+            gap: 20px;
             align-items: center;
-        }
-
-        .icon-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-        }
-
-        .icon-btn:hover {
-            opacity: 1;
-        }
-
-        .icon-btn svg {
-            width: 20px;
-            height: 20px;
-            stroke: #8B7355;
         }
 
         /* Hero Section */
         .hero {
             position: relative;
-            height: 90vh;
+            height: 900px;
             display: flex;
             align-items: center;
-            padding-left: 60px;
+            padding-left: 200px;
             overflow: hidden;
+            background: rgb(255, 251, 247);
         }
 
         .hero-background {
             position: absolute;
             right: 0;
             top: 0;
-            width: 58%;
+            width: 70%;
             height: 100%;
             background: url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1400&q=80') center/cover;
+            opacity: 0.85;
             z-index: 1;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 650px;
+            max-width: 636px;
         }
 
         .hero h1 {
-            font-size: 90px;
+            font-family: 'Baskervville', serif;
+            font-size: 110px;
             font-weight: 400;
             font-style: italic;
-            line-height: 0.95;
-            letter-spacing: -1px;
-            color: #B89968;
+            line-height: 110px;
+            letter-spacing: 0px;
+            color: rgb(165, 129, 85);
             margin-bottom: 50px;
         }
 
         .circle-cta {
-            width: 170px;
-            height: 170px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            border: 1px solid #8B7355;
+            border: 1px solid rgb(165, 129, 85);
             background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s;
-            font-size: 11px;
-            letter-spacing: 2px;
+            font-size: 14px;
+            letter-spacing: 0px;
             text-transform: uppercase;
-            color: #8B7355;
+            color: rgb(165, 129, 85);
             font-weight: 400;
+            margin-top: 40px;
         }
 
         .circle-cta:hover {
-            background: #8B7355;
-            color: #FAF7F2;
+            background: rgb(165, 129, 85);
+            color: rgb(255, 251, 247);
         }
 
         .hero-tagline {
             position: absolute;
-            top: 35%;
-            right: 100px;
-            font-size: 15px;
-            line-height: 1.7;
-            color: #8B7355;
+            top: 20%;
+            right: 200px;
+            font-size: 16px;
+            line-height: 22.4px;
+            color: rgb(124, 116, 106);
             z-index: 3;
-            max-width: 200px;
+            max-width: 187px;
         }
 
         /* New Collection */
         .new-collection {
-            padding: 120px 60px 100px;
+            padding: 120px 200px 100px;
+            background: rgb(255, 251, 247);
         }
 
         .section-title {
-            font-size: 75px;
+            font-family: 'Baskervville', serif;
+            font-size: 85px;
             font-weight: 400;
             font-style: italic;
-            color: #B89968;
+            color: rgb(165, 129, 85);
             margin-bottom: 70px;
-            letter-spacing: -1px;
+            letter-spacing: 0px;
+            line-height: 85px;
         }
 
         .products-grid {
@@ -179,6 +168,7 @@
             background: white;
             cursor: pointer;
             transition: transform 0.3s ease;
+            border: 1px solid rgb(214, 200, 182);
         }
 
         .product-card:hover {
@@ -193,12 +183,12 @@
         .product-image-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 140%;
+            padding-bottom: 125%;
             overflow: hidden;
         }
 
         .product-card:nth-child(2) .product-image-wrapper {
-            padding-bottom: 140%;
+            padding-bottom: 125%;
         }
 
         .product-image {
@@ -208,6 +198,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0.85;
         }
 
         .product-info {
@@ -221,26 +212,26 @@
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #8B7355;
+            color: rgb(124, 116, 106);
             font-weight: 400;
         }
 
         .product-price {
             font-size: 15px;
-            color: #8B7355;
+            color: rgb(124, 116, 106);
         }
 
         .color-swatches {
             display: flex;
-            gap: 8px;
+            gap: 10px;
             padding: 0 15px 20px;
         }
 
         .color-swatch {
-            width: 14px;
-            height: 14px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            border: 0.5px solid rgba(139, 115, 85, 0.2);
+            border: 1px solid rgb(214, 200, 182);
             cursor: pointer;
         }
 
@@ -248,109 +239,54 @@
             display: block;
             margin: 60px auto 0;
             padding: 18px 50px;
-            border: 1px solid #8B7355;
+            border: 1px solid rgb(165, 129, 85);
             background: transparent;
-            color: #8B7355;
+            color: rgb(165, 129, 85);
             text-transform: uppercase;
-            letter-spacing: 2.5px;
-            font-size: 11px;
+            letter-spacing: 0px;
+            font-size: 14px;
             cursor: pointer;
             transition: all 0.3s;
-            font-family: 'Crimson Text', serif;
+            font-family: 'Suisse Intl', sans-serif;
         }
 
         .shop-all-btn:hover {
-            background: #8B7355;
-            color: #FAF7F2;
-        }
-
-        /* Old Collections */
-        .old-collections {
-            padding: 120px 60px;
-            display: grid;
-            grid-template-columns: 45% 55%;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .old-collections h2 {
-            font-size: 75px;
-            font-weight: 400;
-            font-style: italic;
-            color: #B89968;
-            line-height: 1;
-            margin-bottom: 80px;
-            letter-spacing: -1px;
-        }
-
-        .collections-list {
-            list-style: none;
-            border-top: 1px solid rgba(139, 115, 85, 0.15);
-        }
-
-        .collections-list li {
-            padding: 28px 0;
-            border-bottom: 1px solid rgba(139, 115, 85, 0.15);
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 23px;
-            font-style: italic;
-            color: #8B7355;
-            position: relative;
-        }
-
-        .collections-list li:hover {
-            padding-left: 25px;
-            color: #B89968;
-        }
-
-        .collections-list li:nth-child(2)::before {
-            content: '—';
-            position: absolute;
-            left: -30px;
-            color: #B89968;
-        }
-
-        .collections-description {
-            margin-top: 50px;
-            font-size: 15px;
-            line-height: 1.8;
-            color: #8B7355;
-            max-width: 420px;
-        }
-
-        .old-collections-image {
-            width: 100%;
-            height: 750px;
-            object-fit: cover;
+            background: rgb(165, 129, 85);
+            color: rgb(255, 251, 247);
         }
 
         /* Responsive */
         @media (max-width: 1200px) {
+            header {
+                padding: 20px;
+            }
+
+            .hero {
+                padding-left: 50px;
+            }
+
+            .hero h1 {
+                font-size: 70px;
+                line-height: 70px;
+            }
+
+            .new-collection {
+                padding: 80px 50px;
+            }
+
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .product-card:nth-child(2) {
-                grid-column: span 2;
             }
         }
 
         @media (max-width: 768px) {
-            header {
-                padding: 20px 30px;
-            }
-
             nav {
                 display: none;
             }
 
-            .hero {
-                padding: 0 30px;
-            }
-
             .hero h1 {
                 font-size: 50px;
+                line-height: 50px;
             }
 
             .hero-background {
@@ -358,21 +294,13 @@
                 opacity: 0.3;
             }
 
-            .section-title {
-                font-size: 45px;
-            }
-
             .products-grid {
                 grid-template-columns: 1fr;
             }
 
-            .old-collections {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .old-collections h2 {
-                font-size: 45px;
+            .product-card:nth-child(2) {
+                grid-column: span 1;
+                grid-row: span 1;
             }
         }
     </style>
@@ -380,7 +308,7 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">My Sleeping Gypsy</div>
+        <div class="logo">MY SLEEPING GYPSY</div>
         <nav>
             <a href="#shop">Shop</a>
             <a href="#manifesto">Manifesto</a>
@@ -389,15 +317,9 @@
             <a href="#contacts">Contacts</a>
         </nav>
         <div class="header-icons">
-            <button class="icon-btn">
-                <svg viewBox="0 0 24 24" fill="none">ircle cx="11" cy="11" r="8"8"/><path d="m21 21-4.35-4.35"/></svg>
-            </button>
-            <button class="icon-btn">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>ircle cx="12" cy="7"7" r="4"/></svg>
-            </button>
-            <button class="icon-btn">
-                <svg viewBox="0 0 24 24" fill="none">ircle cx="9" cy="21" r="1"1"/>ircle cx="20" cycy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            </button>
+            <span>🔍</span>
+            <span>👤</span>
+            <span>🛒</span>
         </div>
     </header>
 
@@ -409,8 +331,7 @@
             <button class="circle-cta">About our values</button>
         </div>
         <div class="hero-tagline">
-            Save as long as possible.<br>
-            Change when you need it.
+            Save as long as possible. Change when you need it
         </div>
     </section>
 
@@ -423,12 +344,12 @@
                     <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&q=80" alt="Peony" class="product-image">
                 </div>
                 <div class="product-info">
-                    <span class="product-name">Peony</span>
+                    <span class="product-name">PEONY</span>
                     <span class="product-price">$850</span>
                 </div>
                 <div class="color-swatches">
-                    <span class="color-swatch" style="background: #E8DCC8"></span>
-                    <span class="color-swatch" style="background: #D4A373"></span>
+                    <span class="color-swatch" style="background: rgb(255, 255, 255)"></span>
+                    <span class="color-swatch" style="background: rgb(236, 147, 2)"></span>
                 </div>
             </div>
 
@@ -437,11 +358,11 @@
                     <img src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1200&q=80" alt="Magnolia" class="product-image">
                 </div>
                 <div class="product-info">
-                    <span class="product-name">Magnolia</span>
+                    <span class="product-name">MAGNOLIA</span>
                     <span class="product-price">$950</span>
                 </div>
                 <div class="color-swatches">
-                    <span class="color-swatch" style="background: #A8C5DC"></span>
+                    <span class="color-swatch" style="background: rgb(87, 151, 245)"></span>
                 </div>
             </div>
 
@@ -450,49 +371,30 @@
                     <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&q=80" alt="Orchid" class="product-image">
                 </div>
                 <div class="product-info">
-                    <span class="product-name">Orchid</span>
+                    <span class="product-name">ORCHID</span>
                     <span class="product-price">$950</span>
                 </div>
                 <div class="color-swatches">
-                    <span class="color-swatch" style="background: #3D5A80"></span>
-                    <span class="color-swatch" style="background: #98B4D4"></span>
+                    <span class="color-swatch" style="background: rgb(0, 14, 90)"></span>
+                    <span class="color-swatch" style="background: rgb(87, 151, 245)"></span>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="product-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Peony" class="product-image">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Peony Red" class="product-image">
                 </div>
                 <div class="product-info">
-                    <span class="product-name">Peony</span>
+                    <span class="product-name">PEONY</span>
                     <span class="product-price">$850</span>
                 </div>
                 <div class="color-swatches">
-                    <span class="color-swatch" style="background: #2C2C2C"></span>
-                    <span class="color-swatch" style="background: #C4281C"></span>
+                    <span class="color-swatch" style="background: rgb(17, 58, 138)"></span>
                 </div>
             </div>
         </div>
         <button class="shop-all-btn">Shop</button>
     </section>
 
-    <!-- Old Collections -->
-    <section class="old-collections">
-        <div>
-            <h2>Old<br>collections</h2>
-            <ul class="collections-list">
-                <li>La Fleur D'Oranger</li>
-                <li>The Forest Song</li>
-                <li>A Capella & Classics</li>
-                <li>The Secret Gardens</li>
-            </ul>
-            <p class="collections-description">
-                Our collections of past years are still available for purchase and in demand.
-            </p>
-        </div>
-        <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=1000&q=80" alt="Old Collection" class="old-collections-image">
-    </section>
-
 </body>
 </html>
-
